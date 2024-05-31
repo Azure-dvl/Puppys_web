@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+
 import { GalleryComponent } from './gallery/gallery.component';
 
 @Component({
@@ -12,6 +13,4 @@ import { GalleryComponent } from './gallery/gallery.component';
 })
 export class AppComponent {
   title = 'Puppy Web';
-  ico = '/images/imagen.jpg';
-  perfil = '/images/perfil.jpg';
 }

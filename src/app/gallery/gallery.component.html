@@ -1,1 +1,12 @@
-<p>gallery works!</p>
+<div class="container_dog">
+  <ul class="container_box">
+    <li *ngFor='let dog of ldog'>
+      <div class="box_dog">
+        <img [src]='dog.picture'>
+        <h3>{{ dog.name }}</h3>
+        <p>{{ states(dog) }}</p>
+        <button type="button">Leer mas</button>
+      </div>
+    </li>
+  </ul>
+</div>
