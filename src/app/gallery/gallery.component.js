@@ -15,6 +15,9 @@ var GalleryComponent = /** @class */ (function () {
     function GalleryComponent() {
         this.ldog = list_dogs_1.list_dogs;
     }
+    GalleryComponent.prototype.ShowDetails = function (dog) {
+        this.selecteddog = dog;
+    };
     GalleryComponent.prototype.states = function (dog) {
         var state = '';
         if (dog.estado == false) {
@@ -29,7 +32,7 @@ var GalleryComponent = /** @class */ (function () {
         (0, core_1.Component)({
             selector: 'app-gallery',
             standalone: true,
-            imports: [common_1.NgFor, details_component_1.DetailsComponent],
+            imports: [common_1.NgFor, common_1.NgIf, details_component_1.DetailsComponent],
             templateUrl: './gallery.component.html',
             styleUrl: './gallery.component.scss'
         })
