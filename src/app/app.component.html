@@ -5,13 +5,24 @@
             <h1>{{title}}</h1>
             
             <div class="search">
-                <input type="text" placeholder="Filrar por raza">
-                <button class="boton" type="button">Buscar</button>
+                <input [(ngModel)]="dog" type="text" placeholder="Filrar por raza">
+                <button class="boton" type="button" (click)="Filtrar()">Buscar</button>
             </div>
             <button type="button" class="boton">Autentificar</button>
         </div>
     </header>
-    <app-search></app-search>
+    <div>
+        <ul>
+            <li *ngFor="let dog of filtrarlist">
+                <div>
+                    <img [src]="dog.picture">
+                    <h1>{{dog.name}}</h1>
+                    <p>{{dog.details}}</p>
+                    <button type="button">Adoptar</button>
+                </div>
+            </li>
+        </ul>
+    </div>
     <app-gallery></app-gallery>
 </body>
 
