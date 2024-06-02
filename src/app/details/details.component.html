@@ -5,6 +5,7 @@
     <h6>id: {{ dog.id }}</h6>
     <p>{{ dog.details }}</p>
     
-    <button>Adoptar</button>
+    <button type="button" (click)="ShowForm(dog)">Adoptar</button>
+    <app-form-adoptar [dog]="selecteddog"></app-form-adoptar>
   </div>
 </div>

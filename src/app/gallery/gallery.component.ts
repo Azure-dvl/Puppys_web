@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NgFor, NgIf} from '@angular/common';
 
-import { Dogs } from '../Dogs';
-import { list_dogs } from '../list_dogs';
+import { Dogs } from '../interfaces';
+import { list_dogs } from '../list';
 
 import { DetailsComponent } from '../details/details.component';
 
@@ -19,15 +19,5 @@ export class GalleryComponent {
   
   ShowDetails(dog:Dogs):void{
     this.selecteddog = dog;
-  }
-  
-  states(dog:Dogs):string{
-    let state:string = '';
-    if(dog.estado==false){
-      state='disponible';
-    }else{
-      state='vendido';
-  }
-  return state;
   }
 }

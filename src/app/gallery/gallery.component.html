@@ -2,9 +2,8 @@
   <ul class="container_box">
     <li *ngFor='let dog of ldog'>
       <div class="box_dog">
-        <img [src]='dog.picture'>
+        <img [src]='dog.picture' width="200" height="200">
         <h3>{{ dog.name }}</h3>
-        <p>{{ states(dog) }}</p>
         <button type="button" (click)='ShowDetails(dog)'>Leer mas</button>
       </div>
     </li>
