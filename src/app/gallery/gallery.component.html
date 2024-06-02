@@ -7,7 +7,7 @@
           <h3 class="card-title">{{ dog.name }}</h3>
           <p>{{ dog.details }}</p>
           <div class="card-actions justify-end">
-            <button type="button" class="btn btn-primary" (click)='ShowDetails(dog)'>Adoptar</button>
+            <button type="button" class="btn btn-primary" (click)='ShowForm(dog)'>Adoptar</button>
           </div>
         </div>
       </div>
@@ -15,4 +15,4 @@
   </ul>
 </div>
 
-<app-details [dog]="selecteddog"></app-details>
+<app-form-adoptar [dog]="selecteddog"></app-form-adoptar>
