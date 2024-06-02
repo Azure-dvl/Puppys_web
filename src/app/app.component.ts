@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-
+import { routes } from './app.routes';
 import { GalleryComponent } from './gallery/gallery.component';
 import { UserComponent } from './user/user.component';
 

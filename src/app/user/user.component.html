@@ -8,5 +8,20 @@
 </div>
 
 <div *ngIf="listuser">
-    
+    <ul>
+        <li *ngFor="let dog of dogasl">
+            <div>
+                <figure>
+                    <img [src]="dog.picture">
+                </figure>
+                <div>
+                    <h2>{{dog.name}}</h2>
+                    <p>{{dog.details}}</p>
+                </div>
+                <div>
+                    <h4>Humano: {{dog.name_human}} Numero: {{dog.number}}</h4>
+                </div>
+            </div>
+        </li>
+    </ul>
 </div>

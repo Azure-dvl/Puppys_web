@@ -1,44 +1,42 @@
-<body>
-    <header>
-        <div class="barra">
-            <img src='../assets/images/imagen.jpg' width='40' height='40'>
-            <h1>{{title}}</h1>
+<div class="barra">
+    <img src='../assets/images/imagen.jpg' width='40' height='40'>
+    <h1>{{title}}</h1>
             
-            <div class="search">
-                <input [(ngModel)]="dog" type="text" placeholder="Filrar por raza">
-                <button class="boton" type="button" (click)="Filtrar()">Buscar</button>
-            </div>
-            <button (click)="Mostrarlogin()" *ngIf="!logguer" type="button" class="boton">Autentificar</button>
-            <img src="../assets/images/perfil.jpg" *ngIf="logguer" height="40" width="40">
-        </div>
-    </header>
-    <div class="container">
-        <ul class="grid gap-10 grid-cols-4 grid-rows-1">
-            <li *ngFor="let dog of filtrarlist">
-                <div class="card card-compact w-96 bg-base-100 shadow-xl">
-                    <figure><img [src]="dog.picture" class="object-fill h-96 w-96 "></figure>
-                    <div class="card-body">
-                        <h1 class="card-title">{{dog.name}}</h1>
-                        <p>{{dog.details}}</p>
-                    </div>
-                    <div>
-                        <button class="btn btn-primary" type="button">Adoptar</button>
-                    </div>
+    <div class="search">
+        <input [(ngModel)]="dog" type="text" placeholder="Filrar por raza">
+        <button class="boton" type="button" (click)="Filtrar()">Buscar</button>
+    </div>
+    <button (click)="Mostrarlogin()" *ngIf="!logguer" type="button" class="boton">Autentificar</button>
+    <img src="../assets/images/perfil.jpg" *ngIf="logguer" height="40" width="40">
+</div>
+
+<div class="container">
+    <ul class="grid gap-10 grid-cols-4 grid-rows-1">
+        <li *ngFor="let dog of filtrarlist">
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                <figure><img [src]="dog.picture" class="object-fill h-96 w-96 "></figure>
+                <div class="card-body">
+                    <h1 class="card-title">{{dog.name}}</h1>
+                    <p>{{dog.details}}</p>
                 </div>
-            </li>
-        </ul>
-    </div>
-    <app-gallery></app-gallery>
+                <div>
+                    <button class="btn btn-primary" type="button">Adoptar</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
     
-    <div *ngIf="mostrar">
-        <div>
-            <label for="user">Usuario: </label>
-            <input type="text" id="user" [(ngModel)] = 'user'>
-            <label for="password">Contrasenna: </label>
-            <input type="text" id="password" [(ngModel)] = 'password'>
-        </div>
-        <button type="button" (click)="UserLogin()">Ingresar</button>
+<div *ngIf="mostrar">
+    <div>
+        <label for="user">Usuario: </label>
+        <input type="text" id="user" [(ngModel)] = 'user'>
+        <label for="password">Contrasenna: </label>
+        <input type="text" id="password" [(ngModel)] = 'password'>
     </div>
-</body>
+    <button type="button" (click)="UserLogin()">Ingresar</button>
+</div>
+    
+<app-gallery></app-gallery>
 
 

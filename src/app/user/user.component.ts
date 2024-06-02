@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NgIf, NgFor } from '@angular/common';
 
-import { User } from '../interfaces';
-import { list_User } from '../list';
+import { User, DogsAd, Dogs } from '../interfaces';
+import { list_User, list_DogsAd, list_dogs } from '../list';
 
 @Component({
   selector: 'app-user',
@@ -15,7 +15,7 @@ import { list_User } from '../list';
   styleUrl: './user.component.scss'
 })
 export class UserComponent {
-  userl = list_User;
+  dogasl = list_DogsAd;
 
   formadd = false;
   listuser = false;
