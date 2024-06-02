@@ -3,7 +3,6 @@ export interface Dogs{
     name:string;
     details:string;
     raza: string;
-    estado:boolean;
     picture:string;
 }
 
@@ -18,8 +17,8 @@ export interface DogsAd{
     name:string;
     details:string;
     raza: string;
-    estado:boolean;
     picture:string;
+    
     name_human:string;
-    numbre:string;
+    number:string;
 }

@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { NgIf } from '@angular/common';
 
 import { FormAdoptarComponent } from '../form-adoptar/form-adoptar.component';
-import { Dogs, DogsAd } from '../interfaces';
+import { Dogs } from '../interfaces';
 
 @Component({
   selector: 'app-details',
