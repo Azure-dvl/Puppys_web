@@ -1,10 +1,12 @@
 <div *ngIf='dog'>
     <h1>{{dog.name}}</h1>
     <div>
-        <label for="name">Nombre: </label>
-        <input [(ngModel)]="nombre" id="name" type="text">
-        <label for="num">Numero: </label>
-        <input [(ngModel)]="number" type="text" id="num">
+        <div>
+            <label for="name">Nombre: </label>
+            <input [(ngModel)]="nombre" id="name" type="text">
+            <label for="num">Numero: </label>
+            <input [(ngModel)]="number" type="text" id="num">
+        </div>
         <button type="button" (click)="Adoptar(dog)">Adoptar</button>
     </div>
 </div>

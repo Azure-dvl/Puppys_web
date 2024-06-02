@@ -8,7 +8,8 @@
                 <input [(ngModel)]="dog" type="text" placeholder="Filrar por raza">
                 <button class="boton" type="button" (click)="Filtrar()">Buscar</button>
             </div>
-            <button type="button" class="boton">Autentificar</button>
+            <button (click)="Mostrarlogin()" *ngIf="!logguer" type="button" class="boton">Autentificar</button>
+            <img src="../assets/images/perfil.jpg" *ngIf="logguer" height="40" width="40">
         </div>
     </header>
     <div class="container">
@@ -29,6 +30,15 @@
     </div>
     <app-gallery></app-gallery>
     
+    <div *ngIf="mostrar">
+        <div>
+            <label for="user">Usuario: </label>
+            <input type="text" id="user" [(ngModel)] = 'user'>
+            <label for="password">Contrasenna: </label>
+            <input type="text" id="password" [(ngModel)] = 'password'>
+        </div>
+        <button type="button" (click)="UserLogin()">Ingresar</button>
+    </div>
 </body>
 
 
