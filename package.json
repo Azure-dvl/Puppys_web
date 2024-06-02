@@ -1,12 +1,15 @@
 {
-  "name": "dogsweb",
-  "version": "0.0.0",
+  "name": "DogsWebh",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dev": "node --max-old-space-size=2048 ./node_modules/@angular/cli/bin/ng serve",
+    "dev-ip": "node --max-old-space-size=2048 ./node_modules/@angular/cli/bin/ng serve --host 0.0.0.0  --disable-host-check",
+    "dev-ip-check": "node --max-old-space-size=2048 ./node_modules/@angular/cli/bin/ng serve --host 0.0.0.0"
   },
   "private": true,
   "dependencies": {
