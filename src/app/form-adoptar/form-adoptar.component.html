@@ -1,12 +1,21 @@
-<div>
-    <h1>{{dog.name}}</h1>
-    <div>
-        <div>
-            <label for="name">Nombre: </label>
-            <input [(ngModel)]="nombre" id="name" type="text">
-            <label for="num">Numero: </label>
-            <input [(ngModel)]="number" type="text" id="num">
-        </div>
-        <button type="button" (click)="Adoptar(dog)">Adoptar</button>
+<div class="indicator">
+    <span class="indicator-item badge">{{dog.name}}</span>
+    
+    <div class="card border">
+        
+        <div class="card-body">
+        <label class="input input-bordered flex items-center gap-2">
+            Nombre: 
+            <input type="text" [(ngModel)]="nombre" class="grow"/>
+        </label>
+        <label class="input input-bordered flex items-center gap-2">
+            Numero: 
+            <input type="text" [(ngModel)]="number" class="grow"/>
+        </label>
+        <button class="btn btn-primary" (click)="Adoptar(dog)">Adoptar</button>
+        <button class="btn">Cancelar</button>
+      </div>
+    
     </div>
-</div>
+
+  </div>

@@ -1,35 +1,48 @@
-<div>
-    <button type="button" (click)="Mostrar_form()">Agregar un Perro</button>
-    <button type="button" (click)="Mostrar_list()">Listado de perros adoptados</button>
-</div>
-
-<div *ngIf="formadd">
-    <div>
-        <label for="name">Nombre: </label>
-        <input [(ngModel)]="name" id="name" type="text">
-        <label for="details">Detalles: </label>
-        <input [(ngModel)]="details" id="details" type="text">
-        <label for="raza">Raza: </label>
-        <input [(ngModel)]="raza" id="raza" type="text">
-        <label for="picture">Foto: </label>
-        <input [(ngModel)]="picture" id="picture" type="text">
+<div class="container">
+    <div class="join">
+        <button class="btn join-item" onclick="my_modal_3.showModal()">Agregar Perro</button>
     </div>
-    <button type="button" (click)="AddDog()">Agregar</button>
 </div>
 
-<div *ngIf="listuser">
-    <ul>
+<dialog id="my_modal_3" class="modal">
+    <div class="modal-box w-11/12 max-w-5xl">
+        <h1 class="font-bold text-lg">Agregar</h1>
+        <div>
+            <label class="input input-bordered flex items-center gap-2">
+                <input [(ngModel)]="name" type="text" class="grow" placeholder="Nombre: " />
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input [(ngModel)]="details" type="text" class="grow" placeholder="Details: " />
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input [(ngModel)]="raza" type="text" class="grow" placeholder="Raza: " />
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+                <input [(ngModel)]="picture" type="text" class="grow" placeholder="Picture: " />
+            </label>
+        </div>
+    
+        <div class="modal-action">
+            <form method="dialog">
+                <button class="btn btn-outline btn-primary" (click)="AddDog()">Agregar</button>
+                <button class="btn btn-outline btn-primary">Cerrar</button>
+            </form>
+        </div>
+    </div>
+</dialog>
+
+<div class="container">
+    <ul class="grid gap-10 grid-cols-4 grid-rows-1">
         <li *ngFor="let dog of dogasl">
-            <div>
+            <div class="card card-compact w-96 bg-base-100 shadow-xl">
                 <figure>
-                    <img [src]="dog.picture">
+                    <img [src]="dog.picture" class="object-fill h-96 w-96">
                 </figure>
-                <div>
-                    <h2>{{dog.name}}</h2>
+                <div class="card-body">
+                    <h2 class="card-title">{{dog.name}}</h2>
                     <p>{{dog.details}}</p>
-                </div>
-                <div>
-                    <h4>Humano: {{dog.name_human}} Numero: {{dog.number}}</h4>
+                    <h4>Humano: {{dog.name_human}}</h4>
+                    <h4>Numero: {{dog.number}}</h4>
                 </div>
             </div>
         </li>

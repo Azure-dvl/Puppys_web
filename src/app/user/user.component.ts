@@ -19,21 +19,10 @@ import { list_DogsAd, list_dogs } from '../list';
 export class UserComponent {
   dogasl = list_DogsAd;
 
-  formadd = false;
-  listuser = false;
-
   name='';
   details='';
   raza='';
   picture='';
-
-  Mostrar_list():void{
-    this.listuser = true;
-  }
-
-  Mostrar_form():void{
-    this.formadd = true;
-  }
 
   AddDog():void{
     let nuevo:Dogs={

@@ -39,9 +39,6 @@ export class AppComponent{
   Filtrar():void{
     this.filtrarlist = list_dogs.filter(dog => dog.raza === this.dog)
   }
-  Mostrarlogin():void{
-    this.mostrar = true;
-  }
   UserLogin():void{
     if(list_User[0].name===this.user && list_User[0].password===this.password){
       this.logguer = true;

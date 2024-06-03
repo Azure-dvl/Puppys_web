@@ -1,16 +1,24 @@
 <div class="container">
+  
   <ul class="grid gap-10 grid-cols-4 grid-rows-1">
     <li *ngFor='let dog of ldog'>
+
       <div class="card card-compact w-96 bg-base-100 shadow-xl">
-        <figure><img [src]='dog.picture' class="object-fill h-96 w-96 "></figure>
+        <figure><img [src]='dog.picture' class="object-fill h-96 w-96"></figure>
+        
         <div class="card-body">
           <h3 class="card-title">{{ dog.name }}</h3>
           <p>{{ dog.details }}</p>
           <div class="card-actions justify-end">
-            <button type="button" class="btn btn-primary" (click)='ShowForm(dog)'>Adoptar</button>
+            <button type="button" class="btn btn-outline btn-primary" (click)='ShowForm(dog)'>Adoptar</button>
           </div>
+
         </div>
+
       </div>
+      
     </li>
+
   </ul>
+
 </div>
