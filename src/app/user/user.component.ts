@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { NgIf, NgFor } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
-import { User, DogsAd, Dogs } from '../interfaces';
-import { list_User, list_DogsAd, list_dogs } from '../list';
+import { DogsAd, Dogs } from '../interfaces';
+import { list_DogsAd, list_dogs } from '../list';
 
 @Component({
   selector: 'app-user',
   standalone: true,
   imports: [
     NgIf,
-    NgFor
+    NgFor,
+    FormsModule
   ],
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss'
@@ -20,11 +22,23 @@ export class UserComponent {
   formadd = false;
   listuser = false;
 
+  name='';
+  details='';
+  raza='';
+  picture='';
+
   Mostrar_list():void{
     this.listuser = true;
   }
 
   Mostrar_form():void{
     this.formadd = true;
+  }
+
+  AddDog():void{
+    let nuevo:Dogs={
+      id:list_dogs.length+1, name: this.name, details:this.details,raza:this.raza, picture:this.picture
+    };
+    list_dogs.push(nuevo);
   }
 }

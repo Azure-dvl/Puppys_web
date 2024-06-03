@@ -4,7 +4,17 @@
 </div>
 
 <div *ngIf="formadd">
-    
+    <div>
+        <label for="name">Nombre: </label>
+        <input [(ngModel)]="name" id="name" type="text">
+        <label for="details">Detalles: </label>
+        <input [(ngModel)]="details" id="details" type="text">
+        <label for="raza">Raza: </label>
+        <input [(ngModel)]="raza" id="raza" type="text">
+        <label for="picture">Foto: </label>
+        <input [(ngModel)]="picture" id="picture" type="text">
+    </div>
+    <button type="button" (click)="AddDog()">Agregar</button>
 </div>
 
 <div *ngIf="listuser">
