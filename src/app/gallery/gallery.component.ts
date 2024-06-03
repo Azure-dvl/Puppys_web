@@ -11,7 +11,8 @@ import { FormAdoptarComponent } from '../form-adoptar/form-adoptar.component';
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [NgFor, 
+  imports: [
+    NgFor, 
     NgIf, 
     FormAdoptarComponent
   ],

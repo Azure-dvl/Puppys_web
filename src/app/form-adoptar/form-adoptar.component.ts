@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -9,7 +9,7 @@ import { list_dogs, list_DogsAd } from '../list';
 @Component({
   selector: 'app-form-adoptar',
   standalone: true,
-  imports: [NgIf, FormsModule],
+  imports: [NgIf, FormsModule, RouterModule],
   templateUrl: './form-adoptar.component.html',
   styleUrl: './form-adoptar.component.scss'
 })
@@ -17,8 +17,11 @@ import { list_dogs, list_DogsAd } from '../list';
 
 export class FormAdoptarComponent implements OnInit{
   dog:Dogs={id:0, name:'', details:'', raza:'', picture:''};
+
+  nombre: string = '';
+  number: string = '';
   
-  constructor(private route: ActivatedRoute){}
+  constructor(private route: ActivatedRoute, private route2:Router){}
 
   ngOnInit(): void {
       this.route.queryParams.subscribe(params => {
@@ -29,9 +32,6 @@ export class FormAdoptarComponent implements OnInit{
       });
   }
 
-  nombre: string = '';
-  number: string = '';
-
   Adoptar(dog:Dogs):void{
     let id = dog.id;
 
@@ -41,5 +41,7 @@ export class FormAdoptarComponent implements OnInit{
     for (let i = 0; i<list_dogs.length; i++){
       list_dogs[i].id = i;
     }
+
+    this.route2.navigate(['/gallery'])
   }
 }

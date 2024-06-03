@@ -1,11 +1,11 @@
 <div class="container">
     <div class="join">
-        <button class="btn join-item" onclick="my_modal_3.showModal()">Agregar Perro</button>
+        <button id="Agregar_Perro" class="btn join-item" onclick="my_modal_3.showModal()">Agregar Perro</button>
     </div>
 </div>
 
 <dialog id="my_modal_3" class="modal">
-    <div class="modal-box w-11/12 max-w-5xl">
+    <div class="modal-box w-auto max-w-5xl">
         <h1 class="font-bold text-lg">Agregar</h1>
         <div>
             <label class="input input-bordered flex items-center gap-2">
@@ -32,7 +32,7 @@
 </dialog>
 
 <div class="container">
-    <ul class="grid gap-10 grid-cols-4 grid-rows-1">
+    <ul class="grid gap-20 grid-cols-2 grid-rows-1">
         <li *ngFor="let dog of dogasl">
             <div class="card card-compact w-96 bg-base-100 shadow-xl">
                 <figure>
