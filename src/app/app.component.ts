@@ -52,6 +52,10 @@ export class AppComponent{
     });
   }
 
+  UserCrear():void{
+    
+  }
+
   ShowSearch(){
     this.filtrarlist = list_dogs.filter(dog => dog.raza === this.dog)
 
@@ -59,5 +63,9 @@ export class AppComponent{
     this.router.navigate(['/search'], {
       queryParams: {data:data}
     });
+  }
+
+  Validar():boolean{
+    return this.user !== '' && this.password !== '';
   }
 }

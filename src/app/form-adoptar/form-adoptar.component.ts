@@ -44,4 +44,8 @@ export class FormAdoptarComponent implements OnInit{
 
     this.route2.navigate(['/gallery'])
   }
+
+  Validar():boolean{
+    return this.nombre !== ''&& this.number !== '';
+  }
 }

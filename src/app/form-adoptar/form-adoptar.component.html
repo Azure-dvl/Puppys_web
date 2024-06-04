@@ -1,9 +1,7 @@
 <div class="indicator">
     <span class="indicator-item badge">{{dog.name}}</span>
-    
     <div class="card border">
-        
-        <div class="card-body">
+      <div class="card-body">
         <label class="input input-bordered flex items-center gap-2">
             Nombre: 
             <input type="text" [(ngModel)]="nombre" class="grow"/>
@@ -12,10 +10,8 @@
             Numero: 
             <input type="text" [(ngModel)]="number" class="grow"/>
         </label>
-        <button class="btn btn-primary" (click)="Adoptar(dog)">Adoptar</button>
+        <button class="btn btn-primary" (click)="Adoptar(dog)" [disabled]="!Validar()">Adoptar</button>
         <button class="btn" routerLink="/gallery">Cancelar</button>
       </div>
-    
     </div>
-
-  </div>
+</div>

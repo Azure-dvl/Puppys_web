@@ -24,8 +24,8 @@
     
         <div class="modal-action">
             <form method="dialog">
-                <button class="btn btn-outline btn-primary" (click)="AddDog()">Agregar</button>
-                <button class="btn btn-outline btn-primary">Cerrar</button>
+                <button id="Separar" class="btn btn-primary" (click)="AddDog()" [disabled]="!Validar()">Agregar</button>
+                <button class="btn">Cerrar</button>
             </form>
         </div>
     </div>

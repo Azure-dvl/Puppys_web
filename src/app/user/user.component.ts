@@ -30,4 +30,8 @@ export class UserComponent {
     };
     list_dogs.push(nuevo);
   }
+
+  Validar():boolean{
+    return this.name !== ''&& this.details !== '' && this.raza !== '' && this.picture !== '';
+  }
 }
